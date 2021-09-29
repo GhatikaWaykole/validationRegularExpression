@@ -9,7 +9,7 @@ public class ValidationUserCompute {
         System.out.println("welcome regular expression compute");
         ValidationOfUserFormat a = new ValidationOfUserFormat();
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the name to validation");
+        System.out.println("Enter the first and last name to validation");
         String name = scanner.nextLine();
         a.nameValidation(name);
     }
