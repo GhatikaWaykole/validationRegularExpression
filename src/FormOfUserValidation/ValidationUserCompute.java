@@ -12,5 +12,8 @@ public class ValidationUserCompute {
         System.out.println("Enter the first and last name to validation");
         String name = scanner.nextLine();
         a.nameValidation(name);
+        System.out.println("Enter the email to validation");
+        String res = scanner.nextLine();
+        a.validateOfEmail(res);
     }
 }
