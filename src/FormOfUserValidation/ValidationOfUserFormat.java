@@ -13,5 +13,9 @@ public class ValidationOfUserFormat {
         pattern = Pattern.compile(regx);
         matcher = pattern.matcher(name);
         boolean val = matcher.matches();
-    }
+        System.out.println(val);
+        if(val == false){
+            System.out.println("Name should begin with the captial and having 3 or more words");
+            }
+        }
 }

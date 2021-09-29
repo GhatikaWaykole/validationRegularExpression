@@ -7,5 +7,10 @@ import java.util.Scanner;
 public class ValidationUserCompute {
     public static void main(String args[]){
         System.out.println("welcome regular expression compute");
+        ValidationOfUserFormat a = new ValidationOfUserFormat();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the name to validation");
+        String name = scanner.nextLine();
+        a.nameValidation(name);
     }
 }
