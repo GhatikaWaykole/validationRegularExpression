@@ -9,6 +9,7 @@ public class ValidationOfUserFormat {
    String regx = "^[A-Z]{1}[a-z]{2,}\\s[A-Z]{1}[a-z]{2,}";//validation of regex word have first name beginig with capital and white space in the last name
     String regex = "^[A-Za-z0-9.]+@[a-z.]+[a-z]$";         //validate the name of the word
     String reegex = "^[0-9]{2}\\s[0-9]{10}$";
+    String numberregex = "^[a-zA-Z0-9]{8,}";
     // create method and check the name validation with the regx define string
     public static void validationOfWord(String regx,String name){
         pattern = Pattern.compile(regx);
@@ -36,6 +37,15 @@ public class ValidationOfUserFormat {
         System.out.println(val);
         if(val == false){
             System.out.println("number should have ten digit word");
+        }
+    }
+    //create method validationoflogin to number validation compute
+    public void validationOflogin(String name){
+        validationOfWord(numberregex, name);                 //method to compute the regex of the words
+        boolean val = matcher.matches();
+        System.out.println(val);
+        if(val == false) {
+            System.out.println("number should have the validation");
         }
     }
 

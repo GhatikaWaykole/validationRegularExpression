@@ -18,6 +18,8 @@ public class ValidationUserCompute {
         System.out.println("Enter the number to validation");
         String number = scanner.nextLine();
         a.validateOfNumber(number);
-
+        System.out.println("Enter the login to validation");
+        String login = scanner.nextLine();
+        a.validationOflogin(login);
     }
 }
