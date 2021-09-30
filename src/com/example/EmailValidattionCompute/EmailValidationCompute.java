@@ -14,7 +14,6 @@ public class EmailValidationCompute {
         Pattern pattern;
         Matcher matcher;
         ArrayList<String> arrayList = new ArrayList<>();
-        arrayList.add("abc@yahoo.com");
         arrayList.add("abc-100@yahoo.com");
         arrayList.add("abc.100@yahoo.com");
         arrayList.add("abc111@abc.com");

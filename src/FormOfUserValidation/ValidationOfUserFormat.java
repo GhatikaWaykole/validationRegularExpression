@@ -4,14 +4,18 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class ValidationOfUserFormat {
-    Pattern pattern;
-    Matcher matcher;
-    String regx = "^[A-Z]{1}[a-z]{2,}\\s[A-Z]{1}[a-z]{2,}";//validation of regex word have first name beginig with capital and white space in the last name
-    String regex = "^[A-Za-z0-9.]+@[a-z.]+[a-z]$";
+   public static Pattern pattern;
+   public static Matcher matcher;
+   String regx = "^[A-Z]{1}[a-z]{2,}\\s[A-Z]{1}[a-z]{2,}";//validation of regex word have first name beginig with capital and white space in the last name
+    String regex = "^[A-Za-z0-9.]+@[a-z.]+[a-z]$";         //validate the name of the word
+    String reegex = "^[0-9]{2}\\s[0-9]{10}$";
     // create method and check the name validation with the regx define string
-    public void nameValidation(String name) {
+    public static void validationOfWord(String regx,String name){
         pattern = Pattern.compile(regx);
         matcher = pattern.matcher(name);
+    }
+    public void nameValidation(String name) {
+        validationOfWord(regx,name);
         boolean val = matcher.matches();
         System.out.println(val);
         if(val == false){
@@ -19,12 +23,21 @@ public class ValidationOfUserFormat {
             }
         }
         public void validateOfEmail(String name){
-        pattern = Pattern.compile(regex);
-        matcher = pattern.matcher(name);
+        validationOfWord(regex,name);
         Boolean val = matcher.matches();
         System.out.println(val);
         if(val == false){
             System.out.println("Email should need validation");
         }
+      }
+    public void validateOfNumber(String number){
+        validationOfWord(reegex,number);
+        boolean val = matcher.matches();
+        System.out.println(val);
+        if(val == false){
+            System.out.println("number should have ten digit word");
         }
+    }
+
+
 }
